@@ -225,30 +225,6 @@ high success rates, indicating <strong>the high-level policy is the main bottlen
 
 
 
-<!--
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-           Offline goal-conditioned reinforcement learning (GCRL) offers a practical learning paradigm where goal-reaching policies are trained from abundant unlabeled (reward-free) datasets without additional environment interaction. However, offline GCRL still struggles with long-horizon tasks, even with recent advances that employ hierarchical policy structures, such as HIQL. 
-</p>
-<p>By identifying the root cause of this challenge, we observe the following insights: First, performance bottlenecks mainly stem from the high-level policy’s inability to generate appropriate subgoals. Second, when learning the high-level policy in the long-horizon regime, the sign of the advantage signal frequently becomes incorrect. Thus, we argue that improving the value function to produce a clear advantage signal for learning the high-level policy is essential. In this paper, we propose a simple yet effective solution: <strong>Option-aware Temporally Abstracted value learning</strong>, dubbed <strong>OTA</strong>, which incorporates temporal abstraction into the temporal-difference learning process. 
-</p>
-<p>
-
-By modifying the value update to be option-aware, the proposed learning scheme contracts the effective horizon length, enabling better advantage estimates even in long-horizon regimes. We experimentally show that the high-level policy extracted using the OTA value function achieves strong performance on complex tasks from OGBench, a recently proposed offline GCRL benchmark, including maze navigation and visual robotic manipulation environments.
-          </p>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
--->
-
 <section class="hero is-light is-small">
   <div class="hero-body" style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
     <h3 class="title is-4">Experimental Results</h3>
@@ -286,20 +262,23 @@ By modifying the value update to be option-aware, the proposed learning scheme c
 <section class="hero is-light is-small">
   <div class="hero-body">
     <div class="container" style="max-width: 1200px;">
-      <h3 class="title is-5", style="text-align: center;">Videos</h3>
+      <h3 class="title is-5" style="text-align: center;">Videos</h3>
+
       <h4 class="subtitle is-6" style="text-align:center; margin-bottom: 1rem;">
         HumanoidMaze-large-navigate-v0
       </h4>
       <div style="display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap;">
         <div style="text-align: center;">
           <p><strong>HIQL ❌</strong></p>
-          <img src="./media/HIQL_humanoidmaze-large-navigate-v0.gif"
-               style="width: 200px; border-radius: 12px;">
+          <video width="200" style="border-radius: 12px;" autoplay loop muted controls>
+            <source src="./media/HIQL_humanoidmaze-large-navigate-v0.mp4" type="video/mp4">
+          </video>
         </div>
         <div style="text-align: center;">
           <p><strong>OTA (Ours) ✅</strong></p>
-          <img src="./media/OTA_humanoidmaze-large-navigate-v0.gif"
-               style="width: 200px; border-radius: 12px;">
+          <video width="200" style="border-radius: 12px;" autoplay loop muted controls>
+            <source src="./media/OTA_humanoidmaze-large-navigate-v0.mp4" type="video/mp4">
+          </video>
         </div>
       </div>
 
@@ -309,20 +288,21 @@ By modifying the value update to be option-aware, the proposed learning scheme c
       <div style="display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap;">
         <div style="text-align: center;">
           <p><strong>HIQL ❌</strong></p>
-          <img src="./media/HIQL_humanoidmaze-giant-navigate-v0.gif"
-               style="width: 200px; border-radius: 12px;">
+          <video width="200" style="border-radius: 12px;" autoplay loop muted controls>
+            <source src="./media/HIQL_humanoidmaze-giant-navigate-v0.mp4" type="video/mp4">
+          </video>
         </div>
         <div style="text-align: center;">
           <p><strong>OTA (Ours) ✅</strong></p>
-          <img src="./media/OTA_humanoidmaze-giant-navigate-v0.gif"
-               style="width: 200px; border-radius: 12px;">
+          <video width="200" style="border-radius: 12px;" autoplay loop muted controls>
+            <source src="./media/OTA_humanoidmaze-giant-navigate-v0.mp4" type="video/mp4">
+          </video>
         </div>
       </div>
 
     </div>
   </div>
 </section>
-
 
 
 <section class="section" id="BibTeX">
@@ -340,29 +320,14 @@ By modifying the value update to be option-aware, the proposed learning scheme c
 
 <footer class="footer">
   <div class="container">
-    <div class="content has-text-centered">
-      <a class="icon-link"
-         href="./static/videos/nerfies_paper.pdf">
-        <i class="fas fa-file-pdf"></i>
-      </a>
-      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
-        <i class="fab fa-github"></i>
-      </a>
-    </div>
     <div class="columns is-centered">
       <div class="column is-8">
         <div class="content">
           <p>
-            This website is licensed under a <a rel="license"
+            Website borrowed from <a
+              href="https://github.com/nerfies/nerfies.github.io">NeRFies</a> under a <a rel="license"
                                                 href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
             Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-          <p>
-            This means you are free to borrow the <a
-              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
-            we just ask that you link back to this page in the footer.
-            Please remember to remove the analytics code included in the header of the website which
-            you do not want on your website.
           </p>
         </div>
       </div>
