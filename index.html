@@ -110,8 +110,12 @@ MathJax.Hub.Config({
               <a href="https://mindlab-snu.notion.site/taesup-moon">Taesup Moon</a><sup>3</sup>
             </span>
           </div>
+          
+          <div class="is-size-6" style="margin-top: 0.5rem;">
+            *:Equal contribution
+          </div>
 
-          <div class="is-size-5 publication-authors">
+          <div class="is-size-6 publication-authors">
             <span class="author-block"><sup>1</sup>Department of Electrical and Computer Engineering (ECE), Seoul National University</span>
             <span class="author-block"><sup>2</sup>Department of Interdisciplinary Program in Artificial Intelligence (IPAI), Seoul National University</span>
             <span class="author-block"><sup>3</sup> Department of ECE / IPAI / ASRI / INMC, Seoul National University</span>
@@ -161,31 +165,34 @@ MathJax.Hub.Config({
 <section class="section">
   <div class="container is-max-desktop">
     <!-- Abstract. -->
-    <div class="columns is-centered has-text-centered">
+    <div class="columns is-centered">
       <div class="column is-four-fifths">
-      <h2 class="title is-4">High-Level Policy is the Bottleneck of Hierarchical Policy.</h2>
+        <h2 class="title is-4 has-text-centered">
+          High-Level Policy is the Bottleneck of Hierarchical Policy.
+        </h2>
 
-    <div class="container" style="display: flex; justify-content: center; align-items: center;">
-          <img src="./media/motivation.png" width="90%" >
-          </img>
+        <div class="container" style="display: flex; justify-content: center; align-items: center;">
+          <img src="./media/motivation.png" width="90%">
         </div>
+
         <br>
-        <p> We evaluate HIQL by varying only the high-level policy
-while keeping the low-level policy fixed. Using learned high-level policy,
-performance drops, whereas using the oracle high-level policy achieves
-high success rates, indicating <strong>the high-level policy is the main bottleneck</strong>.</p>
+        <p class="has-text-left">
+          We evaluate HIQL by varying only the high-level policy
+          while keeping the low-level policy fixed. Using learned high-level policy,
+          performance drops, whereas using the oracle high-level policy achieves
+          high success rates, indicating <strong>the high-level policy is the main bottleneck</strong>.
+        </p>
       </div>
     </div>
     <!--/ Abstract. -->
-
   </div>
 </section>
 
 <section class="section">
   <div class="container is-max-desktop">
     <!-- Abstract. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
+    <div class="columns is-centered">
+      <div class="column is-four-fifths has-text-centered">
         <h2 class="title is-4">Noisy Advantage Signals in Long-Horizon Regimes.</h2>
 
     <div class="container" style="display: flex; justify-content: center; align-items: center;">
@@ -193,7 +200,7 @@ high success rates, indicating <strong>the high-level policy is the main bottlen
           </img>
         </div>
         <br>
-        <p> As the distance between $s_t$ and $g$ increases, the value estimates become increasingly erroneous, 
+        <p class="has-text-left"> As the distance between $s_t$ and $g$ increases, the value estimates become increasingly erroneous, 
           leading to an imprecise evaluation of the high-level advantage.
         </p>
       </div>
@@ -214,7 +221,7 @@ high success rates, indicating <strong>the high-level policy is the main bottlen
           <video src="media/method.mp4" width="90%" autoplay loop muted controls></video>
         </div>
         <br>
-        <p> By using temporally extended actions in planning, we reduce the effective horizon length, referring to the number of planning steps, to approximately $d^\star(s_t, g)/n$. 
+        <p class="has-text-left"> By using temporally extended actions in planning, we reduce the effective horizon length, referring to the number of planning steps, to approximately $d^\star(s_t, g)/n$. 
         Specifically, we modify the reward and target value to be option-aware, thereby ensuring that the high-level value $V^h$ is suitable for long-term planning.
         </p>
       </div>
